@@ -1,0 +1,12 @@
+feature:
+  - head-branch: ["^feat/"]
+bug:
+  - head-branch: ["^fix/"]
+chore:
+  - head-branch: ["^chore/"]
+docs:
+  - head-branch: ["^docs/"]
+deploy:
+  - all:
+      - head-branch: ["^develop$"]
+      - base-branch: ["^main$"]

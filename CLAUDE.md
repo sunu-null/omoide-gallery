@@ -37,6 +37,7 @@ omoide-gallery/
 ## 브랜치
 - `main`: 안정 버전
 - `develop`: 개발 통합 브랜치. 작업 브랜치는 여기서 분기하고 여기로 머지한다
+- PR 라벨은 브랜치 이름으로 자동 부착 (`.github/labeler.yml`): `feat/`→`feature`, `fix/`→`bug`, `chore/`→`chore`, `docs/`→`docs`, `develop`→`main`은 `deploy`
 - 작업 브랜치: `feat/{간략한 기능 설명}`, `fix/{간략한 버그 설명}`, `chore/{간단한 설명}` 등 (kebab-case)
 
 ## 규칙
