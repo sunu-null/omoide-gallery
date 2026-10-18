@@ -1,0 +1,22 @@
+name: web
+
+on:
+  push:
+    branches: [main, develop]
+    paths: ["web/**"]
+  pull_request:
+    branches: [main, develop]
+    paths: ["web/**"]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v7
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      # Vite 템플릿의 build는 `tsc -b && vite build`라 타입 체크를 포함한다
+      - run: bun run build

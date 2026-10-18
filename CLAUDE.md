@@ -39,6 +39,11 @@ omoide-gallery/
 - `develop`: 개발 통합 브랜치. 작업 브랜치는 여기서 분기하고 여기로 머지한다
 - 작업 브랜치: `feat/{간략한 기능 설명}`, `fix/{간략한 버그 설명}`, `chore/{간단한 설명}` 등 (kebab-case)
 
+## CI
+- GitHub Actions (`.github/workflows/`), `main`·`develop` 대상 push/PR에서 실행
+- `server.yml`: `server/**` 변경 시 `go vet`, `go test`
+- `web.yml`: `web/**` 변경 시 `bun install`, `bun run build` (타입 체크 포함)
+
 ## 규칙
 - 테스트: Go는 `go test`, 프론트는 로직이 생길 때만 vitest
 - 사진 EXIF(촬영일, 위치)를 추억 기록에 활용한다
